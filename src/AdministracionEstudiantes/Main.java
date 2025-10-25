@@ -1,20 +1,20 @@
 package AdministracionEstudiantes;
 
 
-// Clase principal del programa
+// Clase principal para probar la herencia y los métodos
 public class Main {
     public static void main(String[] args) {
-        // Creamos algunos estudiantes usando el constructor
-        Estudiante estudiante1 = new Estudiante("Ana", 20, "A001");
-        Estudiante estudiante2 = new Estudiante("Luis", 22, "A002");
-
-        // Mostramos la información de los estudiantes
-        estudiante1.mostrarInfo();
-        estudiante2.mostrarInfo();
-
-        // Cambiamos la edad de un estudiante usando un método
-        estudiante1.setEdad(21);
-        System.out.println("Después de actualizar la edad:");
-        estudiante1.mostrarInfo();
-    }
+        // Creamos un estudiante univeristario usando el constructor
+        EstudianteUniversitario uni= new EstudianteUniversitario("Ana", 20, "A001","Arquitectura");
+        
+        // Mostramos la información del estudiante universitario
+        uni.mostrarInfo();// Muestra datos heredados + carrera
+        
+        // Creamos un estudiante de preparatoria usando el constructor
+        EstudiantePreparatoria prep = new EstudiantePreparatoria("Luis", 22, "A002",4);
+        
+        // Mostramos la información del estudiante de preparatoria
+        prep.mostrarInfo();// Muestra datos heredados + grado
+               
+        }
 }
